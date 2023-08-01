@@ -1,4 +1,5 @@
-Steps for terminal
+<!-- Steps for terminal -->
+
 Last login: Mon Jun  5 18:10:47 on ttys002
 Angelica@Angelicackbook2 ~ % npm create vite@4.1.0
 ✔ Project name: … NewReactGame
@@ -38,5 +39,7 @@ Angelica@Angelicackbook2 NewReactGame %
 Angelica@Angelicackbook2 NewReactGame % code .
 Angelica@Angelicackbook2 NewReactGame % 
 
+<!-- Steps to GIT -->
 1. git init
-2. add .
+2. git add .
+3. git commit -m (addmessage)=> 'Initial commit for game'
