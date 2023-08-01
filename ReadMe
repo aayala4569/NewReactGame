@@ -1,0 +1,42 @@
+Steps for terminal
+Last login: Mon Jun  5 18:10:47 on ttys002
+Angelica@Angelicackbook2 ~ % npm create vite@4.1.0
+✔ Project name: … NewReactGame
+✔ Package name: … newreactgame
+✔ Select a framework: › React
+✔ Select a variant: › TypeScript
+
+Scaffolding project in /Users/Angelica/NewReactGame...
+
+Done. Now run:
+
+  cd NewReactGame
+  npm install
+  npm run dev
+
+Angelica@Angelicackbook2 ~ % cd NewReactGame
+Angelica@Angelicackbook2 NewReactGame % npm install
+
+added 78 packages, and audited 79 packages in 7s
+
+7 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+Angelica@Angelicackbook2 NewReactGame % npm run dev
+
+> newreactgame@0.0.0 dev
+> vite
+
+
+  VITE v4.4.7  ready in 324 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h to show help
+Angelica@Angelicackbook2 NewReactGame % 
+Angelica@Angelicackbook2 NewReactGame % code .
+Angelica@Angelicackbook2 NewReactGame % 
+
+1. git init
+2. add .
