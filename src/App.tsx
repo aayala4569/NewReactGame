@@ -13,6 +13,7 @@ function App() {
     >
       <GridItem area="nav">
         Nav
+        
         <NavBar/>
       </GridItem>
       <Show above='lg'>
