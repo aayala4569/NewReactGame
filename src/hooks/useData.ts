@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import apiClient from "../services/api-client";
-import { CanceledError } from "axios";
+import { Axios, AxiosRequestConfig, CanceledError } from "axios";
+import { Genre } from "./useGenres";
+import { Game } from "./useGames";
 
 
 
@@ -13,7 +15,7 @@ import { CanceledError } from "axios";
   }
 
 
-const useData = <T>(endpoint: string) => {
+  const useData = <T>(endpoint: string, requestConfig?: AxiosRequestConfig, deps?: any) => {
 
     const [data, setData] = useState<T[]>([]);
     const [error, setError] = useState("");
@@ -29,7 +31,7 @@ const useData = <T>(endpoint: string) => {
 
 
     apiClient
-      .get<FetchResponse<T>>(endpoint, {signal: controller.signal})
+      .get<FetchResponse<T>>(endpoint, {signal: controller.signal,...requestConfig})
       // This references the interfaces
       // This is the promise
       .then((response) => {
@@ -45,7 +47,7 @@ const useData = <T>(endpoint: string) => {
         setIsloading(false)
        });
       return () => controller.abort();
-  }, []);
+  },deps ? [...deps]:[]);
   //the [] is a dependency
 //a useEffect should always have a dependency. The array [] above is our dependency and can pass a usestate
 
@@ -53,5 +55,8 @@ const useData = <T>(endpoint: string) => {
   
 
 }
+
+const useGames = (selectedGenre: Genre | null) =>
+useData<Game>("./games", {params:{genres:{genres: selectedGenre?. id}}})
 
 export default useData;
