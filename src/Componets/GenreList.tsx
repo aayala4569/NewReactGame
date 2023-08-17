@@ -12,7 +12,7 @@ interface Props {
 
 //Below we are mapping out
 const GenreList = ({onSelectGenre}: Props) => {
-  const { data, isloading, error } = useData<Genre>("/genres");
+  const { data, isloading, error } = useGenres();
   
   return (
     <List>
